@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Update from './Update';
 export default class Affichage extends React.Component {
   constructor(){
     super()
@@ -20,7 +21,7 @@ export default class Affichage extends React.Component {
         })
       })
       }
-      
+     
        delData(noteId){
         fetch('http://localhost:3500/notes/'+noteId,
         {method:'DELETE',
@@ -33,7 +34,7 @@ export default class Affichage extends React.Component {
           })
         })
       }
-      
+     
     render(){
 
         return (
@@ -47,8 +48,10 @@ export default class Affichage extends React.Component {
                 <h5 class="card-title">{contact.content}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">{contact.createdAt}</h6>
                      <p  class="card-text">{contact.updatedAt}</p>
-                     <button  class="" onClick={()=>this.delData(contact._id)}>DELETE</button>
-                  </div>
+                    
+                     <button  class="" onClick={()=>this.delData(contact._id)}>DELETE</button><br/><br/>
+                     <Update contact={this.state.contacts.id}/>
+            </div>
                   </div>
           ))}
           </div>

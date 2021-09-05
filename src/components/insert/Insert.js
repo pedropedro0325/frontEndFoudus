@@ -34,17 +34,10 @@ export default class Insert extends React.Component {
     axios.post("http://localhost:3500/notes",insertion)
         .then((response)=>{
          console.log(response);
+         alert("Restaurant has heen added");
         });
       }
-      /*sauvegarder(){
-       axios.post("http://localhost:3500/notes",{
-           title:this.state.title,
-           content:this.state.content
-           })
-           .then((response)=>{
-            console.log(response);
-           });
-        // }*/
+     
     render(){
        
   return (
