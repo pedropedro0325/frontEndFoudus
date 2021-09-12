@@ -1,6 +1,9 @@
 
 import React from 'react';
 import Update from './Update';
+import { Button } from 'react-bootstrap';
+
+import { Link } from 'react-router-dom';
 export default class Affichage extends React.Component {
   constructor(){
     super()
@@ -40,6 +43,10 @@ export default class Affichage extends React.Component {
         return (
           <div>
           <center><h1>Contact List</h1></center>
+          {'     '}
+          <Link to="/">
+          <Button type="button" className="btn">Menu</Button>
+          </Link>{'     '}
           {this.state.contacts.map((contact)=>(
       
             <div class="card">
@@ -54,6 +61,7 @@ export default class Affichage extends React.Component {
             </div>
                   </div>
           ))}
+
           </div>
           );
     }

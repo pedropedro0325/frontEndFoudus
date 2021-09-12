@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
+import { Link } from 'react-router-dom';
 export default class Insert extends React.Component {
     
     constructor(){
@@ -54,7 +56,10 @@ export default class Insert extends React.Component {
     </div>
     <br />
     <div className="text-right">
-    <button className="btn btn-primary" onClick={this.sauvegarder}>Insert</button>
+    <button className="btn btn-primary" onClick={this.sauvegarder}>Insert</button>{'     '}
+    <Link to="/">
+    <Button type="button" className="btn">Menu</Button>
+    </Link>
     </div>
     </form>
    </div>
